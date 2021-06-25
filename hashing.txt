@@ -1,0 +1,12 @@
+
+    'Folding Technique
+    Function Hashing(ByRef Cust_Id As String)
+        Dim charLetras, intDigitos, numeroRecord, colisiones As Integer
+
+        charLetras = Asc(Cust_Id.Substring(0, 3))
+        intDigitos = Cust_Id.Substring(3, 3)
+        numeroRecord = charLetras + intDigitos
+        lstHashCodes.Items.Add(Cust_Id & ":" & vbTab & numeroRecord)
+
+        Return numeroRecord
+    End Function
